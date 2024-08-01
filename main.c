@@ -10,7 +10,7 @@ void printSelectionSort(int b[], int lengthb);
 
 int main()
 {
-  // Learn Bubble sort
+  // Bubble sort
   int a[] = {3, 4, 5, 2, 6, 5, 8, 34, 56, 2, 11, 4, 5};
   int lengtha = sizeof(a) / sizeof(a[0]);
   // printf("%d\n ", length);
@@ -26,6 +26,8 @@ int main()
 
   return 0;
 }
+
+// NOTE Bouble sort method DONE
 
 int bubbleSort(int a[], int lengtha)
 {
@@ -53,7 +55,7 @@ void printBubbleSort(int a[], int lengtha)
   }
 }
 
-// NOTE Selection sort mothod:
+// NOTE Selection sort mothod: DONE
 
 int selectionSort(int b[], int lengthb)
 {
