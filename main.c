@@ -8,6 +8,10 @@ void printBubbleSort(int a[], int lengtha);
 int selectionSort(int b[], int lengthb);
 void printSelectionSort(int b[], int lengthb);
 
+// INSERTION SORT
+int insertionSort(int c[], int lengthc);
+void printInsertionSort(int c[], int lengthc);
+
 int main()
 {
   // Bubble sort
@@ -19,10 +23,17 @@ int main()
   printBubbleSort(a, lengtha);
 
   int b[] = {3, 4, 5, 2, 6, 5, 8, 34, 56, 2, 11, 4, 5};
-  int lengthb = sizeof(b) / sizeof(0);
+  int lengthb = sizeof(b) / sizeof(b[0]);
 
   selectionSort(b, lengthb);
   printSelectionSort(b, lengthb);
+
+  // Selection Sort
+  int c[] = {3, 4, 5, 2, 6, 5, 8, 34, 56, 2, 11, 4, 5};
+  int lengthc = sizeof(c) / sizeof(c[0]);
+
+  insertionSort(c, lengthc);
+  printInsertionSort(c, lengthc);
 
   return 0;
 }
@@ -38,6 +49,7 @@ int bubbleSort(int a[], int lengtha)
     {
       if (a[j] > a[j + 1])
       {
+        // Swap
         int temp = a[j];
         a[j] = a[j + 1];
         a[j + 1] = temp;
@@ -65,13 +77,15 @@ int selectionSort(int b[], int lengthb)
     for (int j = i + 1; j < lengthb; j++)
     {
       if (b[j] < b[minimum])
-      {
+
         minimum = j;
-      }
     }
-    int temp = b[i];
-    b[i] = b[minimum];
-    b[minimum] = temp;
+    if (minimum != i)
+    {
+      int temp = b[i];
+      b[i] = b[minimum];
+      b[minimum] = temp;
+    }
   }
 }
 
@@ -82,5 +96,34 @@ void printSelectionSort(int b[], int lengthb)
   for (int i = 0; i < lengthb; i++)
   {
     printf("%d, ", b[i]);
+  }
+}
+
+// NOTE Insertion Sort Method
+
+int insertionSort(int c[], int lengthc)
+{
+
+  int key;
+  int j;
+  for (int i = 1; i < lengthc; i++)
+  {
+    key = c[i];
+    j = i - 1;
+    while (j >= 0 && c[j] > key)
+    {
+      c[j + 1] = c[j];
+      j = j - 1;
+    }
+    c[j + 1] = key;
+  }
+}
+
+void printInsertionSort(int c[], int lengthc)
+{
+  printf("\nInsertion sort method: ");
+  for (int i = 0; i < lengthc; i++)
+  {
+    printf("%d ", c[i]);
   }
 }
