@@ -10,7 +10,7 @@ CC = gcc
 TARGET = binus_c_tools
 
 # Source files
-SRC = merge.c
+SRC = quick-sort.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
