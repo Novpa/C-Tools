@@ -7,7 +7,7 @@ int partition(int array[], int low, int high);
 
 int main() {
 
-    int a[] = {5, 3, 6, 3, 4, 6, 5, 43, 7, 87, 5, 23, 54, 65};
+    int a[] = {6, 3, 7, 5, 1, 2, 4};
 
     int length = sizeof(a) / sizeof(a[0]);
 
@@ -39,8 +39,15 @@ void quickSort_recursion(int array[], int low, int high) {
 }
 
 int partition(int array[], int low, int high) {
+
     int pivot_value = array[high];
+
     int i = low;
+
+    //                j
+    //  3 1 2 [4] 5 6 7
+    //        i
+
     for (int j = low; j < high; j++) {
         if (array[j] <= pivot_value) {
             swap(&array[i], &array[j]);
@@ -48,5 +55,6 @@ int partition(int array[], int low, int high) {
         }
     }
     swap(&array[i], &array[high]);
+
     return i;
 }
