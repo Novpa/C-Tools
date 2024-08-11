@@ -10,7 +10,7 @@ CC = gcc
 TARGET = binus_c_tools
 
 # Source files
-SRC = calendar.c
+SRC = exam-testing-1.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
