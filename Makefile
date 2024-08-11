@@ -10,7 +10,7 @@ CC = gcc
 TARGET = binus_c_tools
 
 # Source files
-SRC = quick-sort.c
+SRC = calendar.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
