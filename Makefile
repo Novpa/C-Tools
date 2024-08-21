@@ -10,7 +10,7 @@ CC = gcc
 TARGET = binus_c_tools
 
 # Source files
-SRC = exam-1.c
+SRC = recursions.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
