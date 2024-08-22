@@ -10,7 +10,7 @@ CC = gcc
 TARGET = binus_c_tools
 
 # Source files
-SRC = factorial-recursion.c
+SRC = fibonacci-recursion.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
