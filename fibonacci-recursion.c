@@ -14,6 +14,7 @@ int fibonacci(int angka1, int angka2, int selection) {
 // NOTE
 // Let say angka1 = 1; angka2 = 2; selection = 4;
 
+// REMARK
 // since (selection - 1)
 // fibonacci 4 --> fibonacci(1, 2, 4)
 // fibonacci 3 --> fionacci(2, (1 + 2), 3)

@@ -10,7 +10,7 @@ CC = gcc
 TARGET = binus_c_tools
 
 # Source files
-SRC = fibonacci-recursion.c
+SRC = count_digits.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
