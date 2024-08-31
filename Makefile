@@ -10,7 +10,7 @@ CC = gcc
 TARGET = binus_c_tools
 
 # Source files
-SRC = bigonotation.c
+SRC = bigonotation-factorial.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
