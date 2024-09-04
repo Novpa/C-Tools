@@ -1,5 +1,5 @@
   check file branch: ---> git branch
-  
+
   Initialize Git (if needed): --->   git init
 
   Add remote repository: --->     git add remote add origin <URL>
@@ -11,3 +11,9 @@
   Commit changes: --->  git commit -m "Commit message"
 
   Push to GitHub: ---> git push origin main
+
+////////////////////////////////////////////////////////////////
+
+  Stage untracked files: ---> git add ../../src/ ---> git add . ---> git commit -m '' ---> git push origin main
+
+////////////////////////////////////////////////////////////////
