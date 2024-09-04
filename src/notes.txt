@@ -1,0 +1,13 @@
+  check file branch: ---> git branch
+  
+  Initialize Git (if needed): --->   git init
+
+  Add remote repository: --->     git add remote add origin <URL>
+
+  Check file status: --->  git status
+
+  Stage files: --->  git add .
+
+  Commit changes: --->  git commit -m "Commit message"
+
+  Push to GitHub: ---> git push origin main
