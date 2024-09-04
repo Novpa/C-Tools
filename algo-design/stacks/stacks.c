@@ -4,7 +4,7 @@
 int arr[MAX];
 int top = -1;
 
-// Adding element to array
+// NOTE Adding element to array
 int push(int num) {
     if (top == MAX - 1) {
         printf("Array is overflow\n");
@@ -15,7 +15,7 @@ int push(int num) {
     }
 }
 
-// Remove last elemet of the array
+// NOTE Remove last elemet of the array
 int pop() {
     if (top == -1) {
         printf("Array is empty\n");
