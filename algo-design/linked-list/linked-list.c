@@ -8,19 +8,21 @@ struct node {
 
 int main() {
 
-    struct node *head = NULL;
-    head = (struct node *)malloc(sizeof(struct node));
-    head->data = 1;
-    head->link = NULL;
+    struct node *first = (struct node *)malloc(sizeof(struct node));
+    first->num = 1;
+    first->link = NULL;
 
-    struct node *current = NULL;
-    current = (struct node *)malloc(sizeof(struct node));
-    current->data = 2;
-    current->link = NULL;
+    struct node *second = (struct node *)malloc(sizeof(struct node));
+    second->num = 2;
+    second->link = NULL;
 
-    head->link = current;
+    first->link = second;
 
-    printf("%d\n", head->link->data);
+    struct node *third = (struct node *)malloc(sizeof(struct node));
+    third->num = 3;
+    third->link = NULL;
+
+    second->link = third;
 
     return 0;
 }
