@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// TAG Node structure
 struct node {
     int num;
     struct node *link;
@@ -37,7 +38,7 @@ int printLinkedList(struct node *head) {
     }
 }
 
-// TAG adding a node at the end of the list
+// TAG adding a node at the end of the list NOTE ---> O(n)
 void insertLinkedList(struct node *head, int num) {
     struct node *ptr = head;
     struct node *next = (struct node *)malloc(sizeof(struct node));
@@ -50,6 +51,29 @@ void insertLinkedList(struct node *head, int num) {
     }
     ptr->link = next;
 }
+
+// TAG adding a node at the end of the list NOTE ---> O(1)
+struct node *insertLinkedList2(struct node *ptr, int num) {
+    struct node *next = malloc(sizeof(struct node));
+    next->num = num;
+    next->link = NULL;
+
+    ptr->link = next;
+    return next;
+}
+
+// TAG inserting a node in the beginning of the list
+struct node *insertbeginning(struct node *head, int num) {
+    struct node *next = malloc(sizeof(struct node));
+    next->num = num;
+    next->link = NULL;
+
+    next->link = head;
+    head = next;
+    return head;
+}
+
+// TAG inserting a node to a certain data
 
 int main() {
 
@@ -76,12 +100,25 @@ int main() {
 
     third->link = fourth;
 
-    insertLinkedList(first, 5);
+    // Inserting node at the end O(n)
+    // insertLinkedList(first, 5);
+
+    // Inserting node at the end O(1)
+    struct node *ptr = fourth;
+    ptr = insertLinkedList2(ptr, 6);
+    ptr = insertLinkedList2(ptr, 7);
+    ptr = first;
+
+    // Inserting node in the beginning of the list
+    first = insertbeginning(first, 0);
+    first = insertbeginning(first, -1);
 
     // TAG divider
     printf("Linked list = ");
     printLinkedList(first);
     printf("\nLinked list total = %d\n", countLinkedList(first));
+
+    printf("%d\n", fourth->link->num);
 
     return 0;
 }
