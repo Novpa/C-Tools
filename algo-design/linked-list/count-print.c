@@ -6,6 +6,7 @@ struct node {
     struct node *link;
 };
 
+// TAG count the length
 int countLinkedList(struct node *head) {
     if (head == NULL) {
         printf("Linked list is empty\n");
@@ -23,6 +24,7 @@ int countLinkedList(struct node *head) {
     return count;
 }
 
+// TAG print the data
 int printLinkedList(struct node *head) {
     if (head == NULL) {
         printf("Linked list is empty\n");
@@ -35,8 +37,23 @@ int printLinkedList(struct node *head) {
     }
 }
 
+// TAG adding a node at the end of the list
+void insertLinkedList(struct node *head, int num) {
+    struct node *ptr = head;
+    struct node *next = (struct node *)malloc(sizeof(struct node));
+
+    next->num = num;
+    next->link = NULL;
+
+    while (ptr->link != NULL) {
+        ptr = ptr->link;
+    }
+    ptr->link = next;
+}
+
 int main() {
 
+    // TAG head struct ---> first
     struct node *first = (struct node *)malloc(sizeof(struct node));
     first->num = 1;
     first->link = NULL;
@@ -59,9 +76,12 @@ int main() {
 
     third->link = fourth;
 
-    printf("Linked list total = %d\n", countLinkedList(first));
+    insertLinkedList(first, 5);
+
+    // TAG divider
     printf("Linked list = ");
     printLinkedList(first);
+    printf("\nLinked list total = %d\n", countLinkedList(first));
 
     return 0;
 }
