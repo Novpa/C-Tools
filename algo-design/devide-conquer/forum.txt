@@ -1,31 +1,7 @@
-#include <stdio.h>
-
-int main() {
-
-    return 0;
-}
-
-// NOTE
-
-/*----------------------------------------------------------------
-
-< 30 : E
-30 s/d 50: D
-51 s/d 75: C
-76 s/d 89 : B
->89 : A
-
-Bobot tugas perorangan: 20%
-Bobot tugas kelompok: 20%
-Bobot kehadiran: 5%
-Bobot UTS: 20%
-Bobot UAS: 35%
-
-TAG
 
 START
 
-  // Deklarasi variable
+  // Deklarasi variable 
   DECLARE bobot_tugas_peroranan = 0.2
   DECLARE bobot_tugas_kelompok = 0.2
   DECLARE bobot_kehadiran = 0.05
@@ -67,7 +43,7 @@ START
       INPUT nilai_uas
 
   // Loop akan terjadi jika tidak memenuhi fungsi validation
-  WHILE valid_score
+  WHILE valid_score 
 
 // Menghitung masing -  masing nilai berdasarkan bobot
 nilai_tugas_perorangan = nilai_tugas_perorangan * bobot_tugas_perorangan
@@ -85,7 +61,7 @@ nilai_uas = nilai_uas * bobot_nilai_uas
 accumulation = nilai_tugas_perorangan + bobot_nilai_tugas_kelompok +
 nilai_kehadiran  + nilai_uts + nilai_uas
 
-    // Mengecek nilai sesuai dengan total akumulasi nilai
+    // Mengecek nilai sesuai dengan total akumulasi nilai   
     IF accumulation > 89
       PRINT ("Nilai: A")
 
@@ -98,16 +74,7 @@ nilai_kehadiran  + nilai_uts + nilai_uas
     ELSE IF accumulation >= 30 and accumulaton <= 50
       PRINT ("Nilai: D")
 
-    ELSE
+    ELSE 
       PRINT ("Nilai: E")
 
 END
-
-
-
-
-
-
-
-
-*/
