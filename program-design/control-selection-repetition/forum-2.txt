@@ -1,0 +1,42 @@
+Selamat malam Bapak,
+
+Baik, berikut pseudocode dari simple program yang saya buat berdasarkan studi kasus yang telah diberikan di atas.
+
+START
+    
+    // Deklarasi variable pilihan
+    DECLARE pilihan
+ 
+      PRINT ("Masukan nomor bulan (1 - 12): ")
+      INPUT pilihan // Meminta input user
+
+    SELECT CASE pilihan
+        CASE 1
+          PRINT ("Januari memiliki 31 hari")
+        CASE 2
+          PRINT ("Februari memiliki 28 / 29 hari)
+        CASE 3
+          PRINT ("Maret memiliki 31 hari")
+        CASE 4
+          PRINT ("April memiliki 30 hari")
+        CASE 5
+          PRINT ("Mei memiliki 31 hari")
+        CASE 6
+          PRINT ("Juni memiliki 30 hari")
+        CASE 7
+          PRINT ("Juli memiliki 31 hari")
+        CASE 8
+          PRINT ("Agustus memiliki 31 hari")
+        CASE 9
+          PRINT ("September memiliki 30 hari")
+        CASE 10
+          PRINT ("Oktober memiliki 31 hari")
+        CASE 11
+          PRINT ("November memiliki 30 hari")
+        CASE 12
+          PRINT ("Desember memiliki 31 hari")
+        CASE ELSE
+          ("Invalid Input") // Jika input user salah
+    END SELECT
+
+END
