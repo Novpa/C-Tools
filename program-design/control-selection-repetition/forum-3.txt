@@ -1,0 +1,19 @@
+Selamat sore Bapak, 
+
+Baik berikut adalah Algorithm dalam sytax Pseudocode dari studi kasus yang diberikan di atas.
+
+START
+    DECLARE kecepatan 
+    DECLARE waktu
+
+    PRINT ("Berapa kecepatan pengemudi?")
+    INPUT kecepatan
+
+    PRINT ("Berapa waktu yang ditempuh oleh pengemudi?")
+    INPUT waktu 
+
+    FOR i = 1 TO waktu STEP 1
+        PRINT ("Jam ke" + i + ", Jarak: " + (kecepatan * i ))
+    NEXT
+
+END
