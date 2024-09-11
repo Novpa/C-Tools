@@ -12,7 +12,7 @@ START
     PRINT ("Berapa waktu yang ditempuh oleh pengemudi?")
     INPUT waktu 
 
-    FOR i = 1 TO waktu STEP 1
+    FOR i = 1 TO waktu STEP 1 
         PRINT ("Jam ke" + i + ", Jarak: " + (kecepatan * i ))
     NEXT
 
