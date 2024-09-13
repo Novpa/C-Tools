@@ -1,0 +1,15 @@
+mergeSort(arr, 0, 3)
+|
+|-- mergeSort(arr, 0, 1)
+|   |
+|   |-- mergeSort(arr, 0, 0)  // Returns immediately
+|   |-- mergeSort(arr, 1, 1)  // Returns immediately
+|   |-- merge(arr, 0, 0, 1)   // First merge
+|
+|-- mergeSort(arr, 2, 3)
+    |
+    |-- mergeSort(arr, 2, 2)  // Returns immediately
+    |-- mergeSort(arr, 3, 3)  // Returns immediately
+    |-- merge(arr, 2, 2, 3)   // Second merge
+|
+|-- merge(arr, 0, 1, 3)       // Final merge
