@@ -7,10 +7,10 @@ CC = gcc
 # CFLAGS = -Wall -Wextra -Werror -std=c11
 
 # Target executable
-TARGET = binus_c_tools
+TARGET = quick-sort
 
 # Source files
-SRC = Search/binary-search.c
+SRC = quick-sort.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
