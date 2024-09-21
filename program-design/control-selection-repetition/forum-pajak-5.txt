@@ -1,0 +1,80 @@
+
+pseudocode : Menghitung Pajak Tahunan
+
+START
+    // Deklarasi variable float pendapatan, biayaJabatan, penghasilanBersih, tarif pajak, pph, pendapatanPerTahun
+    DECLARE pendapatan
+    DECLARE biayaJabatan
+    DECLARE penghasilanBersih
+    DECLARE penghasilanKenaPajak
+    DECLARE tarifPajak
+    DECLARE pph
+    DECLARE pendapatanPerTahun
+
+    // Deklarasi PTKP wajib pajak orang pribadi
+    DECLARE ptkpPribadi = 54 000 000
+
+    OUTPUT ("Input pendapatan : ")
+    OUTPUT pendapatan
+    pendapatanPerTahun = 12 * pendapatan
+
+    IF pendapatanPerTahun < 60 000 000 THEN
+        biayaJabatan = 0
+        OUTPUT ("Tidak kena Pajak")
+        
+        ELSE IF pendapatanPerTahun == 60 000 000 THEN
+            biayaJabatan = 5% * pendapatanPerTahun
+
+                ELSE IF pendapatanPerTahun > 60 000 000  AND pendapatanPerTahun <= 250 000 000 THEN
+                    biayaJabatan = 15% * pendapatanPerTahun
+
+                        ELSE IF pendapatanPerTahun > 250 000 000 AND pendapatanPerTahun <= 500 000 000 THEN
+                            biayaJabatan = 25% * pendapatanPerTahun
+
+                                ELSE IF pendapatanPerTahun > 500 000 000 AND pendapatanPerTahun <= 5 * (10^9)
+                                    biayaJabatan = 30% * pendapatanPerTahun
+                                    
+                                        ELSE IF pendapatanPerTahun > 5 * (10^9)
+                                            biayaJabatan = 35% * pendapatanPerTahun
+    ENDIF
+
+    IF biayaJabatan != 0 THEN
+        penghasilanBersih = pendapatanPerTahun - biayaJabatan
+        penghasilanKenaPajak = penghasilanBersih - ptkpPribadi
+
+        IF penghasilanKenaPajak < 50 000 000 THEN
+            pph = 5%
+
+            ELSE IF penghasilanKenaPajak > 50 000 000 AND penghasilanKenaPajak <= 250 000 000 THEN
+                pph = 15 %
+
+                ELSE IF penghasilanKenaPajak > 250 000 000 AND penghasilanKenaPajak <= 500 000 000 THEN
+                    pph = 15%
+
+                    ELSE
+                        pph = 30 %
+        ENDIF
+    ENDIF
+        tarifPajak = pph * penghasilanKenaPajak
+        OUTPUT ("Kena pajak dengan tarif: ", tarifPajak)
+END
+
+
+________________________________________________________
+
+Desk check:
+
+Sebagai desk check, saya kan menggunakan data:
+pendapatan = 10 000 000
+
+Input pendapatan: 10 000 000
+pendapatanPerTahun = 100 000 000
+pendapatanPerTahun > 60 000 000  AND pendapatanPerTahun <= 250 000 000
+biayaJabatan = 25 000 000
+penghasilanBersih = 75 000 000
+penghasilanKenaPajak = 21 000 000
+penghasilanKenaPajak < 50 000 000
+pph = 5%
+tarifPajak = 1050000
+
+Output program: "Kena pajak dengan tarif: 1050000"
