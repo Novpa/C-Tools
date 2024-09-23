@@ -1,0 +1,93 @@
+//Pseudocode : Aplikasi Pemilihan Ketua Kelas
+
+START
+    //deklarasi jumlah siswa
+    DECLARE jumlahSiswa = 30
+
+    //deklarasi total sum suara masing masing kandidat dimulai dari 0
+    DECLARE totalAnto = 0
+    DECLARE totalBambang = 0
+    DECLARE totalSukaryo = 0
+
+    //deklarasi variable integer untuk pilihan
+    DECLARE Pemilihan
+
+    //deklarasi variable integer nomor induk 
+    DECLARE noInduk;
+
+    //Deklarasi daftar nomor induk sebagai Array yang kosong 
+    DECLARE daftarNomorInduk to empty
+
+    FOR i from 1 to jumlahSiswa do
+
+        //deklarasi boolean set sebagai False
+        DECLARE statusNomorInduk = False
+
+
+        DO
+            //Meminta input nomor induk user
+            OUTPUT ("Masukan nomor Induk: ")
+            INPUT noInduk
+
+            //pengecekan apakah siswa sudah pernah memilih atau tidak melalui matching nomor induk
+            FOR j from 1 to length OF daftarNomorInduk
+                IF daftarNomorInduk[j] == noInduk THEN
+                    SET statusNomorInduk = True
+                    BREAK
+                ENDIF
+            ENDFOR
+
+            IF statusNomorInduk = True  THEN
+                OUTPUT ("Siswa dengan nomor induk tersebut sudah memilih, masukan nomor Induk lain")
+            ENDIF
+
+        //Loop akan tetap berjalan sampai nomor induk tidak ditemukan di dalam array daftarNomorInduk
+        WHILE statusNomorInduk = True
+
+        // nomor Induk ditambahkan ke array daftarNomorInduk
+        ADD noInduk to daftarNomorInduk
+
+        DO
+            //Meminta input pilihan user
+            OUTPUT ("pilih Anto = 1 / Bambang = 2 / Sukaryo = 3")
+            INPUT pilihan
+
+            //Jika pilihan 1 maka totalAnto akan bertambah
+            IF pilihan == 1 THEN
+                totalAnto = totalAnto + 1
+
+                //Jika pilihan 2 maka totalBambang akan bertambah
+                ELSE IF pilihan == 2 THEN
+                    totalBambang = totalBambang + 1
+
+                    //Jika pilihan 3 maka totalSukaryo akan bertambah
+                    ELSE IF pilihan == 3 THEN
+                        totalSukaryo = totalSukaryo + 1
+
+                        //Jika pilihan selain 1, 2, & 3
+                        ELSE  
+                            OUTPUT ("input salah, masukan nomor 1 / 2 / 3")
+            ENDIF
+
+        WHILE pilihan != 1 AND pilihan != 2 AND pilihan != 3
+
+    ENDFOR
+
+    //Jika Anto mendapatkan suara terbanyak
+    IF totalAnto > totalBambang AND totalAnto > totalSukaryo THEN
+        OUTPUT ("Ketua kelas terpilih adalah Anto dengan total suara", totalAnto)
+
+        //Jika Bambang mendapatkan suara terbanyak THEN
+        ELSE IF totalBambang > totalAnto AND totalBambang > totalSukaryo
+            OUTPUT ("Ketua kelas terpilih adalah Bambang dengan total suara", totalBambang)
+
+            //Jika Sukaryo mendapatkann suara terbanyak THEN
+            ELSE IF totalSukaryo > totalAnto AND totalSukaryo > totalBambang
+                OUTPUT ("Ketua kelas terpilih adalah Sukaryo dengan total suara", totalSukaryo)
+
+                //Jika terjadi seri
+                ELSE
+                OUTPUT ("Terdapat hasil seri")
+    ENDIF
+
+END

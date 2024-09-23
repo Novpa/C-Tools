@@ -1,0 +1,64 @@
+Kita akan menggunakan nomor induk dan pilihan sebagai input untuk 3 iterasi.
+
+Iterasi 1:
+Nomor Induk: 101
+Pilihan: 1 (Anto)
+
+Iterasi 2:
+Nomor Induk: 102
+Pilihan: 2 (Bambang)
+
+Iterasi 3:
+Nomor Induk: 103
+Pilihan: 3 (Sukaryo)
+
+________________________________________________________
+
+Berikut adalah desk checking berdasarkan pseudocode yang saya buat di atas per iterasi:
+
+Pada iterasi 1:
+Input Nomor Induk: 101
+daftarNomorInduk = [ ] (kosong)
+statusNomorInduk = False (Nomor Induk belum pernah dimasukkan)
+Nomor Induk 101 ditambahkan ke dalam daftarNomorInduk maka daftarNomorInduk = [101]
+Input Pilihan: 1 (Anto)
+Pilihan valid: totalAnto bertambah 1 sehngga totalAnto = 1
+totalBambang = 0, totalSukaryo = 0
+
+
+Pada perulangan ke 2:
+Input Nomor Induk: 102
+daftarNomorInduk = [101]
+statusNomorInduk = False (Nomor Induk belum pernah dimasukkan)
+Nomor Induk 102 ditambahkan ke dalam daftarNomorInduk, sehingga daftarNomorInduk = [101, 102]
+Input Pilihan: 2 (Bambang)
+Pilihan valid: totalBambang bertambah 1, maka totalBambang = 1
+totalAnto = 1, totalSukaryo = 0
+
+pada iterasi yang ke 3:
+Input Nomor Induk: 103
+daftarNomorInduk = [101, 102]
+statusNomorInduk = False (Nomor Induk belum pernah dimasukkan)
+Nomor Induk 103 ditambahkan ke dalam daftarNomorInduk, maka daftarNomorInduk = [101, 102, 103]
+Input Pilihan: 3 (Sukaryo)
+
+Pilihan valid: totalSukaryo bertambah 1,  totalSukaryo = 1
+totalAnto = 1, totalBambang = 1
+
+________________________________________________________
+
+Berikut adalah kondisi dan total masing masing variable setelah iterasi yang ketiga :
+
+daftarNomorInduk = [101, 102, 103]
+totalAnto = 1
+totalBambang = 1
+totalSukaryo = 1
+Hasil Akhir Setelah 3 Iterasi:
+untuk saat ini, suara untuk masing-masing kandidat adalah seri:
+
+totalAnto = 1
+totalBambang = 1
+totalSukaryo = 1
+
+
+dan output program : "Terdapat hasil seri"
