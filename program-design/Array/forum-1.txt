@@ -1,0 +1,70 @@
+Instruksi :
+Silakan baca kembali tugas kelompok 1 anda. Kemudian buatlah pseudo code untuk:
+    Input jumlah penumpang
+    Input nama penumpang
+    Input tujuan penumpang, jika ke Jakarta harga tiketnya adalah 500.000 sedangkan selain jakarta adalah 750.000
+    Tampilkan daftar penumpang dan total tiket yang diperoleh 
+
+
+
+Selamat malam Bapak,
+
+Ijin menjawab,
+Berikut adalah Algoritma menggunakan pseudocode berdasarkan data data tersebut :
+
+START
+    // Deklarasi total penumpang
+    DECLARE Integer totalPenumpang
+
+    // Deklarasi total harga tiket semua penumpang, inisialisasi dengan 0
+    DECLARE Integer sumTiket = 0
+
+    // Meminta user untuk input jumlah penumpang
+    OUPUT ("Input jumlah penumpang: ")
+    INPUT totalPenumpang
+
+    // Deklarasi Array untuk menampung nama penumpang berupa string
+    DECLARE namaPenumpang[totalPenumpang]
+
+    // Deklarasi array untuk menampung tujuan setiap penumpang
+    DECLARE tujuanPenumpang[totalPenumpang]
+
+    // Deklarasi array untuk menampung harga tiket setiap penumpang
+    DECLARE hargaTiket[totalPenumpang]
+
+    // Loop untuk meminta user input nama dan tujuan masing masing penumpang
+
+    FOR i = 1 TO totalPenumpang
+        
+        // Meminta user untuk input nama penumpang
+        OUTPUT ("Input nama penumpang ke ", i)
+        INPUT namaPenumpang[i]
+
+        // Meminta user untuk input tujuan penumpang
+        OUTPUT ("Input tujuan penumpang ke ", i)
+        INPUT tujuanPenumpang[i]
+
+        // Statement penentuan harga tiket berdasarkan tujuan
+        IF 
+            IF tujuanPenumpang[i] == 'Jakarta'
+                hargaTiket[i] = 500000
+                ELSE
+                    hargaTiket[i] = 750000
+        END IF
+    END FOR 
+
+    // Loop untuk print informasi penumpang berdasarkan data yang di input
+
+    FOR i = 1 TO totalPenumpang
+        OUTPUT ("Data penumpang ke ". i)
+        OUTPUT ("Nama :", namaPenumpang[i])
+        OUTOUT ("Tujuan :", tujuanPenumpang[i])
+        OUTPUT ("Harga tiket/pax :", hargaTiket[i])
+
+        sumTiket = sumTiket + hargaTiket[i]
+
+        // Statement akan berjalan jika sudah pada iterasi terakhir dan total harga akan di print
+        
+        IF i == totalPenumpang THEN OUTPUT ("Total harga tiket untuk " + i "orang adalah" + sumTiket)        
+    END LOOP
+END

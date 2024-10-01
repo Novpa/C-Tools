@@ -1,0 +1,63 @@
+Info:
+A is terhubung dengan  B, C, D
+B is terhubung dengan  A, C, E, F
+C is terhubung dengan  A, B, D, F
+D is terhubung dengan  A, C, E
+E is terhubung dengan  B, D, F
+F is terhubung dengan  B, C, E
+
+Degree :
+A:  memiliki Degree = 3
+B:  memiliki Degree = 4
+C:  memiliki Degree = 4
+D:  memiliki Degree = 3
+E:  memiliki Degree = 3
+F:  memiliki Degree = 3
+
+Decendent sorting :
+B:  → Degree = 4 
+C:  → Degree = 4
+A:  → Degree = 3
+D:  → Degree = 3
+E:  → Degree = 3
+F:  → Degree = 3
+
+- Setelah  kita urutkan dari degree yang terbesar kita akan memulainya dengan degree yang terbesar tersebut. yaitu B, kita akan melihat dan mencari vertex yang tidak bertetangga / terhubung dengan B mulai dari degree tertinggi ke terendah, jika ditemukan kita akan mewarnainya sama dengan vertex B. Dalam case ini saya akan memberikan warna Biru.
+
+dan menandainya jika sudah diwarnai :
+B:  → Degree = 4 🔵
+C:  → Degree = 4
+A:  → Degree = 3
+D:  → Degree = 3 🔵
+E:  → Degree = 3
+F:  → Degree = 3
+
+Jika sudah kita akan terus mencari vertex yang tidak terhubung dengan B & D, dalam case ini sudah tidak ada.
+
+- Langkah selanjutnya adalah kita akan melihat Vertex berikutnya dibawah B yaitu C, kita akan memberi warna yang berbeda terhadap warna C dan mencari vertex yang tidak bertetangga dengan vertex C (Saya akan memberikan warna Kuning). Dalam case ini adalah E.
+
+B:  → Degree = 4 🔵
+C:  → Degree = 4 🟡
+A:  → Degree = 3
+D:  → Degree = 3 🔵
+E:  → Degree = 3 🟡
+F:  → Degree = 3
+
+Setelah menemukan E, kita akan mencari lagi vertex yang tidak terhubung dengan C & E, jika ada kita akan beri warna sama yaitu Kuning. Dalam case ini sudah tidak ada, jadi kita bisa lanjut ke vertex berikutnya Yaitu A.
+
+- Pada case ini saya akan mewarnai A dengan warna Merah, setelah dicheck hanya tersisa 1 vertex yaitu F dan kebetulan tidak bertetangga dengan A jadi kita bisa mewarnainya sama dengan A. 
+
+B:  → Degree = 4 🔵
+C:  → Degree = 4 🟡
+A:  → Degree = 3 🔴
+D:  → Degree = 3 🔵
+E:  → Degree = 3 🟡
+F:  → Degree = 3 🔴
+
+Untuk hasil akhir Graph, bisa dilihat digambar yang sudah saya buat di atas.
+
+Total Chromatic number dalam Graph ini sebanyak 3 (3 Warna).
+
+Sekian dan Terima kasih
+
+Novpa

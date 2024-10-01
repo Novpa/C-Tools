@@ -56,5 +56,23 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "workbench.colorCustomizations": {
+    "terminal.background": "#000000",   // Black background
+    "terminal.foreground": "#11ff00",   // Light gray text
+    "terminalCursor.foreground": "#de05ff",  // White cursor
+    "terminal.ansiGreen": "#ffffff",     // Bright green for green text
+    "terminal.integrated.cursorStyle": "block"  // Options: "block", "underline", or "line"
+
+
+
+},
+"terminal.integrated.cursorBlinking": true,  // Make the cursor blink
+"terminal.integrated.lineHeight": 1.8,          // Line height for the terminal text
+"terminal.integrated.fontSize": 13.5,             // Adjust the font size
+
+"terminal.integrated.fontFamily": "Lucida Console",  // Customize font
+"editor.fontLigatures": true,  // Enables ligatures if the font supports it
+"terminal.integrated.fontWeight": "normal"  // You can also set this to "bold"
+
 }

@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": true,
       "cwd": "c:/Users/novpa/Documents/GitHub/Binus-C-Tools",
-      "program": "c:/Users/novpa/Documents/GitHub/Binus-C-Tools/build/Debug/outDebug",
+      "program": "c:/Users/novpa/Documents/GitHub/Binus-C-Tools/ASCII-print.exe",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
