@@ -68,7 +68,7 @@
 
 },
 "terminal.integrated.cursorBlinking": true,  // Make the cursor blink
-"terminal.integrated.lineHeight": 1.8,          // Line height for the terminal text
+"terminal.integrated.lineHeight": 1.3,          // Line height for the terminal text
 "terminal.integrated.fontSize": 13.5,             // Adjust the font size
 
 "terminal.integrated.fontFamily": "Lucida Console",  // Customize font
