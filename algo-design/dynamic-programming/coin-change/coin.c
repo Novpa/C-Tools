@@ -24,9 +24,9 @@ int minCoins(int coins[], int m, int V) {
 }
 
 int main() {
-    int coins[] = {1, 2, 5};
+    int coins[] = {2, 5, 10};
     int m = sizeof(coins) / sizeof(coins[0]);
-    int V = 11;
+    int V = 17;
     printf("Minimum coins required: %d\n", minCoins(coins, m, V));
     return 0;
 }

@@ -9,11 +9,13 @@ int knapsack(int profit[], int weight[], int length, int maximum){
     
     // Loop through all items
     for (int i = 0; i <= length; i++) {
+
+        
         // Loop through all possible capacities
         for (w = 0; w <= maximum; w++) {
             if (i == 0 || w == 0) {
                 dp[i][w] = 0; // Base case: no items or zero capacity
-            } else if (weight[i] <= w) {
+    } else if (weight[i] <= w) {
                 // Include or exclude the item and take the maximum
                 dp[i][w] = MAX(profit[i] + dp[i - 1][w - weight[i]], dp[i - 1][w]);
             } else {

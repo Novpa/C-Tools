@@ -1,0 +1,42 @@
+Selamat sore Bapak,
+
+Ijin menjawab,
+Berikut adalah contoh susunan dari deret Fibonacci = [0, 1, 1, 2, 3, 5, 8 ... dan seterusnya]
+
+Seperti yang kita lihat, terdapat suatu pola dalam deret tersebut dimana nilai dari setiap angka adalah hasil penjumlahan dari 2 angka sebelumnya. 
+
+Ada 2 cara penyelesaian kasus Fibonacci, yang pertama adalah bottom up dan yang kedua adalah top down.
+
+Dalam forum ini saya akan menjelaskan dengan pendekatan Bottom up.
+
+Sebenarnya apasih teknik Bottom up?
+Metode ini adalah metode pendekatan dengan menghitung sub masalah terkecil terlebih dahulu, kemudian menuju ke sub masalah yang lebih besar. Metode ini biasa disebut dengan metode iteratif dikarenakan kita menggunakan loop untuk menampung nilai yang sudah terhitung sehingga nantinya kita bisa pakai.
+
+Langkah langkah nya sebagai berikut:
+
+1. Pertama kita akan inisialisasi nomor pertama dan kedua dari Fibonacci tersbut dalam suatu array contoh nya dp= [0, 1]
+
+2. setelah itu, untuk menghitung nilai element selanjutnya kita akan menjumlahkan 2 angka tersebut sehingga menghasilkan angka baru. Dalam case ini adalah 0 + 1 = 1. Setelah kita mendapatkan hasilnya, kita akan simpan hasil tersebut ke dalam array. Penyimpanan ini kita lakukan dengan menggunakan looping, sehingga dp = [
+0, 1, 10]
+
+3. Untuk mencari nilai selanjutnya kita akan mengulang hal yang sama, yaitu menjumlahkan 2 elemen terakhir, dalam case ini yaitu 1 + 1 = 2 dan selanjutnyamenampung nilai tersebut ke dalam array yang sudah kita buat sebelumnya. Sehingga dp = [0, 1, 1, 2]. Kita akan mengulangi langkah ini sampai mendapatkan hasil ke n yang diinginkan.
+
+Berikut adalah contoh use case untuk n = 10
+
+dp[0] = 0
+dp[1] = 1
+dp[2] = dp[1] + dp[0] = 1 + 0 = 1
+dp[3] = dp[2] + dp[1] = 1 + 1 = 2
+dp[4] = dp[3] + dp[2] = 2 + 1 = 3
+dp[5] = dp[4] + dp[3] = 3 + 2 = 5
+dp[6] = dp[5] + dp[4] = 5 + 3 = 8
+dp[7] = dp[6] + dp[5] = 8 + 5 = 13
+dp[8] = dp[7] + dp[6] = 13 + 8 = 21
+dp[9] = dp[8] + dp[7] = 21 + 13 = 34
+dp[10] = dp[9] + dp[8] = 34 + 21 = 55
+
+Dapat disimpulkan bahwa dalam usecase di atas, nili Fibonacci untuk n = 10 adalah 55.
+
+Terima kasih
+
+Novpa

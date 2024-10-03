@@ -1,0 +1,18 @@
+Selamat malam Bapak,
+
+Ijin menjawab,
+Baik berikut adalah contoh use case dari Knapsack Problem menggunakan Dynamic Programming lengkap dengan langkah langkah yang telah di buat :
+
+1. langkah pertama yang akan kita lakukan adalah inisialisasi berat 0 untuk semua kolom 0 dan baris 0 yang berarti bahwa belum ada item yang bisa dimasukan.
+
+2. Selanjutnya kita akan mengisi baris pada item 1 (berat = 2, nilai = 10) sehingga kita bisa mengisi item 1 pada berat 2 - 10 saja dan mengisi nilai 0 pada kolom berat 1.
+
+3. Pada pengisian baris di item 2, kita akan melihat ke baris item 2 juga untuk mempertimbangkan nila selajutnya. Pada tahap ini kita akan berfokus pada berat di item 2 yaitu 3 yang mempunyai nilai 15, sehingga secara langsung kita bisa mengisi kolom 3 degnan nilai 15. dikarenakan kita juga mempunyai item 1, jika kita tambahkan item 1 dan item 2 dengan jumlah berat 5, kita bisa langsung isi kolom 5 dengan total nilai 10 + 15 = 25. Ini juga berlaku untuk kolom 5 ke atas. Namun bagaimana dengan kolom 1, 2, 4? Untuk kolom 1 & 2 kita akan isi sama dengan nilai pada item 2 sedangkan di kolom 4 kita akan isi sama dengan kolom 3 yaitu 15 dikarenakan hanya berat 3 yang bisa dimasukan.
+
+4.  Pada baris di item 3 (berat  = 5, nilai 40), maka kita bisa langsung masukan nilai 40 ke kolom 5 dikarenakan 40 > 25 (pada baris item 2), kita juga bisa isi kolom 7 (gabungan item 3 & 1) dengan total nilai = 40 + 10 = 50. Kita juga bisa isi kolom 8 (Gabungan dari item 3 dan 2) dengan total nilai = 40 + 15 = 55 ini juga berlaku untuk kolom 9 dan 10. untuk kolom 6 kita akan isi nilai sama dengan nilai di kolom 6, sedangkan di kolom 4 ke bawah akan kita isi nilai yang sama pada kolom di item sebelumnya.
+
+5. Pada pengisian di baris item 4 (berat 4, nilai = 30), kita akan langsung isi kolom 4 dengan nilai 30. Kemudian dilanjutkan dengan pengisian kolom 1 -3 dengan nilai yang sama seperti nilai di kolom pada item sebelumnya. Pada kolom 5 bisa diisi dengan nilai yang sama yaitu 40 diakrenakan tidak ada kombinasi baru. Pada kolo 6 kita mendapatkan kombinasi baru (item 4 & 1) dengan total nilai = 30 + 10 =40 namun memiliki nilai yang sama jadi kita tidak akan mengubahnya. Begitu juga pada baris ke 7 dan 850, kita tidadk akan merubahnya dikarenakan nilai yang dihasilkan dari variasi baru adalah lebih kecil sehingga kita menggunakan nilai yang paling maksimal yaitu tetap menggunakan 50. Beda hal nya dengan kolom 9 dimana kita bisa menggabungkan nilai di item 4 & 3 dengan total nilai = 70, dan yang terakhir pada kolom 10, kita akan menggunakan nilai yang sama yaitu 70 dikarenakan kombinasi baru hanya menghahsilkan nilai kurang dari 70.
+
+6. Pada kolom terakhir (berat 6, nilai = 50) kita akan langsung isi di kolom 6 dengan nilai 50 dan untuk kolom 1 -5 kita akan isi nilai yang sama dengan nilai pada kolom di item sebelumnya. Lanjut ke kolom 7, tidak ada kombinasi baru maka kita akan mengisi dengan nilai yang sama yaitu 50. Pada kolom 8 kita mendapatkan kombinasi baru yaitu (item 5 & 1) dengan total nilai 60. Pada kolom 9, kita akan mengisi dengan nilai 7 dikarenakan tidak ada kombinaasi baru yang menghasilkan nilai lebih dari 70. Yang terakhir yaitu  pada kolom 10 kita mendapatkan variasi baru yaitu (item 5 & 4) dengan total nilai 80.
+
+Sehingga dapat disimpulkan bahwa nilai maksimum yang dapat dimasukan ke dalam knapsack dengan kapasitas 10 dari data di atas adalah 80 (Gabungan dari item 4 dan 5)
