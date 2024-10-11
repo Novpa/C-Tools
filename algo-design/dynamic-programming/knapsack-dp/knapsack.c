@@ -23,7 +23,7 @@ int knapsack(int profit[], int weight[], int length, int maximum){
                 dp[i][w] = dp[i - 1][w];
             }
         }
-    }
+    }   
     
     // Return the maximum value found in the knapsack
     return dp[length][maximum];
