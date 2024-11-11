@@ -24,6 +24,5 @@ int main() {
     int len = length - 1;
 
     printAscii(input, len);
-
     return 0;
 }
